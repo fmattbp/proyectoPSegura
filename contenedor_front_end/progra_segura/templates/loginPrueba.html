@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <style type="text/css">
+    body {
+    
+    }
+    form {
+        background-color: white;
+        border-radius: 4px;
+        color: #737D8E;
+        font-size: 0.9em;
+        padding: 20px;
+        width: 300px;
+        margin: 0 auto;
+    
+    
+    }
+    input, textarea{
+        border: 0;
+        outline: none;
+        width: 280px;
+    }
+
+    .field{ 
+        border: solid 1px #ccc;
+        padding: 5px;
+        width: 280px;
+    }
+
+    .field:focus{
+        border-color: #18A383;
+    }
+
+    .center-content{
+       text-align: center;
+    }
+    .btn{
+      cursor: pointer;
+      border-radius: 3px;
+      display: inline-block;
+      padding: 20px 15px;
+          text-decoration: none;
+          text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+         box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    }
+    .btn-green{
+        color: white;
+        background-color: #4088E2;
+    }
+    .btn-green:hover{
+     background-color: #3668B9;
+    }
+    .btn-green:active{
+     background-color: #235EBC;
+        transform: scale(0.98)
+    }
+
+    h2{
+     text-align: center;
+     margin-bottom: 20px;
+    }
+    </style>
+    
+    
+    <head>
+        <title>Login Proyecto</title>    
+    </head>
+    
+    <body>
+    <img src="https://images2.alphacoders.com/589/thumb-1920-589399.jpg">
+        <br> <br> <br>
+       
+        <form method="post">{% csrf_token %}
+            
+            <h2>Login</h2>
+            <p>Usuario:</p>
+            <label for="user">Usuario</label>
+              <input type="text" name = "usuario">
+            
+            <p>Contraseña:</p>
+                <label for="pass">Contraseña</label>
+                  <input type="password" name = "password">
+            <p class="center-content"><input type="submit" class="btn btn-green" value=Iniciar>Iniciar sesión</p>
+        </form>
+    </body>
+
+
+</html>
