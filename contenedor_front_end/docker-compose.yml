@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+
+  front_end:
+    environment:
+      SECRET_KEY: ${SECRET_KEY}
+    build: .
+    restart: always
+    container_name: front_end_segura
+    volumes:
+      - ./progra_segura:/code
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: "250M"
+
+  nginx:
+    image: nginx
+    restart: always
+    volumes:
+      - ./config/nginx/conf.d:/etc/nginx/conf.d
+      - ./progra_segura/templates:/static
+    depends_on:
+      - front_end
+    ports:
+      - 8000:8888
