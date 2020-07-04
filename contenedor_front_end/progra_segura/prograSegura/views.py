@@ -10,10 +10,10 @@ import requests
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
 from datetime import datetime
-
+import json
 
 def login(request):
-	t = 'login_v2.html' 
+	t = 'login.html' 
 	if request.method == 'GET' and not request.session.get('logueado', False):
 		return render(request, t)
 	elif request.method == 'POST' and not request.session.get('logueado', False):
@@ -89,7 +89,15 @@ def verificar_usuario(request):
 def monitor(request):
 	t='lista.html'
 	if request.method == 'GET' and request.session.get('verificado', False):
-		return render(request,t)
+		respuesta = requests.get("http://201.105.244.77:8000/monitor/")
+		if respuesta.status_code != 200:
+			return render(request,t,{'errores' : "Forbidden 403"})
+		info = respuesta.text
+		info = json.loads(info)
+		cpu = info['cpu']
+		memoria = info['memoria']
+		disco = info['disco']
+		return render(request,t,{'cpu': cpu,'memoria':memoria,'disco':disco})
 	else: #request.method == 'GET':
 		return redirect('/verificar_usuario')
 

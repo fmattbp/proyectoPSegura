@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Login{% endblock %}
+
+{% block contenido %}
+<br>
+{% if errores %}
+<div class="alert alert-warning">
+  <strong>WARNING {{ errores }}</strong>
+</div>
+{% endif %}
+
+<section>
+   <div class="login-form"> 
+  <form method="POST" action="/verificar_usuario/">
+   {% csrf_token %}
+    <h2 class="text-center">Verificación con Telegram</h2>  
+        <div class="form-group">
+  
+    <center><input type="text" name="codigo"  placeholder="Ingresa tu código"></center>
+        </div>
+    <button type="submit" class="btn btn-primary btn-block" value=Iniciar>Enviar</button>
+    <a href="http://tucanes.ddns.net:8888/generar_nuevo_token/">Generar nuevo token</a>
+  </form>
+   </div>
+</section>
+<div class="footer">
+  <p>Facultad de Estadística e Informática | Universidad Veracruzana</p>
+</div>
+{% endblock %}
+
+
+
+

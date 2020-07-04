@@ -16,12 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from prograSegura.views import *
-
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', logout),
     path('login/', login),
     path('verificar_usuario/', verificar_usuario, name='verificar_usuario'),
+    path('generar_nuevo_token/', generar_nuevo_token),
     path('monitor/', monitor),
     path('logout/', logout),
 ]

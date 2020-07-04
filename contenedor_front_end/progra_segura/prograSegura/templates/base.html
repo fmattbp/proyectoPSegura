@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>{% block titulo %}Título{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'local/css/base.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    {% block estilos %}{% endblock %}
+    {% block scripts %}{% endblock %}
+  </head>
+  
+  <body>
+    
+    <header >
+    </header>
+
+    
+    <section class="container">
+      {% block contenido %}{% endblock %}
+    </section>
+
+    <br /> <br />
+
+    <br /> <br />
+    <br /> <br />
+    <br /> <br />
+
+    <footer class="footer font-small text-center pie">
+      <div>Universidad Veracruzana</div>
+      <div>Facultad de Estadística e informática</div>
+    </footer>
+    
+  </body>
+</html>

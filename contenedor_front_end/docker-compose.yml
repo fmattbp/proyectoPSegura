@@ -21,7 +21,7 @@ services:
     restart: always
     volumes:
       - ./config/nginx/conf.d:/etc/nginx/conf.d
-      - ./progra_segura/templates:/static
+      - ./progra_segura/static:/static
     depends_on:
       - front_end
     ports:

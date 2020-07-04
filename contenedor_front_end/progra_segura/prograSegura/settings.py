@@ -27,7 +27,10 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIE_AGE = 300 # set just 10 seconds to test
+SESSION_SAVE_EVERY_REQUEST = True
 
 # Application definition
 
@@ -56,7 +59,7 @@ ROOT_URLCONF = 'prograSegura.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [BASE_DIR + '/prograSegura/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,3 +124,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 #STATICFILES_DIRS = (BASE_DIR + '/static', )
+STATIC_ROOT = '/static'
