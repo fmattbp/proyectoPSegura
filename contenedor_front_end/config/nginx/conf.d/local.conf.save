@@ -6,13 +6,13 @@ upstream front_end_wsgi {
 
 # now we declare our main server
 server {
-   # listen 443;
-    listen 443 ssl default_server;
-    listen [::]:443 ssl default_server;
+    listen 443;
+    #listen 443 ssl default_server;
+    #listen [::]:443 ssl default_server;
     server_name tucanes.ddns.net;
-    ssl_certificate     /certs/cert1.pem;
-    ssl_certificate_key /certs/privkey1.pem;
-    ssl_protocols       TLSv1.3;
+sl_certificate" directive is not allowed here in /etc/nginx/nginx.conf:34
+nginx: [emerg] "ssl_certificate" directive is not allowed here in /etc/nginx/nginx.conf:34
+
 
     location / {
         # everything is passed to Gunicorn
@@ -31,4 +31,3 @@ server {
         alias /media/;
     }
 }
-

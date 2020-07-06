@@ -22,7 +22,9 @@ services:
     volumes:
       - ./config/nginx/conf.d:/etc/nginx/conf.d
       - ./progra_segura/static:/static
+      - /etc/letsencrypt/archive/tucanes.ddns.net:/certs 
+     # - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
       - front_end
     ports:
-      - 8000:8888
+      - 8000:443
