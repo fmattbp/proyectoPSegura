@@ -5,11 +5,18 @@ services:
   front_end:
     environment:
       SECRET_KEY: ${SECRET_KEY}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
     build: .
     restart: always
     container_name: front_end_segura
     volumes:
       - ./progra_segura:/code
+    depends_on:
+      - bd
     deploy:
       resources:
         limits:
@@ -28,3 +35,13 @@ services:
       - front_end
     ports:
       - 8000:443
+
+  bd:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    volumes:
+      - /home/tucanesalv/data:/var/lib/mysql
+

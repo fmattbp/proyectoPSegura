@@ -1,6 +1,10 @@
 #!/bin/bash
 
-for var in $(ccrypt -d -c settings.env.cpt); do
+#for var in $(ccrypt -d -c settings.env.cpt); do
+#    export "$var"
+#done
+
+for var in $(cat settings.env); do
     export "$var"
 done
 
