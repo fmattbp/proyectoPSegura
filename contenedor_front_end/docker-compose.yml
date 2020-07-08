@@ -10,6 +10,10 @@ services:
       DB_PASSWORD: ${DB_PASSWORD}
       DB_HOST: ${DB_HOST}
       DB_PORT: ${DB_PORT}
+      CLIENTE_SERVICIOS_USR: prueba
+      CLIENTE_SERVICIOS_PWD: AlfaOmega2020
+      URL_SERVICIOS: http://tucanes.ddns.net:8080
+      LLAVE_AES: ${LLAVE_AES}
     build: .
     restart: always
     container_name: front_end_segura
