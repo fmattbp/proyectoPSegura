@@ -8,7 +8,7 @@ import os
 import requests
 from datetime import datetime
 import json
-
+from prograSegura import excepciones
 
 def login(request):
 	t = 'login.html' 
@@ -74,31 +74,17 @@ def verificar_usuario(request):
 
 @esta_logueado
 def monitor(request):
-	url_servicios= models.client_server.objects.all().values_list('url_servicios',flat=True).filter(usuario=request.session.get('id_usuario'))
 	iv_pwd=request.session.get('iv_pwd')
 	usuario = request.session.get('usuario')
-	query_contra = models.registrar_contraseña.objects.all().values_list('contraseña',flat=True).filter(usuario=request.session.get('id_usuario'))
-	contra_cif = query_contra[0]
-	contra = back_end.descifrar(contra_cif,iv_pwd)
-	try:
-		token = back_end.regresar_token_sesion(url_servicios[0],usuario,contra.decode('utf-8'))
-	except:
-		return render(request,t{'errores':"Algo fallo al obtener el token")
+	id_usuario = request.session.get('id_usuario')
 	if request.method == 'GET' and request.session.get('verificado', False):
 		t='lista.html'
-		headers = {'Authorization':'Token %s' %token}
-		respuesta = requests.get(url_servicios[0]+'/monitor/',headers=headers)
-		#for ip in lista_ip_asociada:
-		#	print (ip)
-			#requests.get("https://",ip,":8000/monitor/")
-		#if respuesta.status_code != 200:
-		#	return render(request,t,{'errores' : "Forbidden 403"})
-		info = respuesta.text
-		info = json.loads(info)
-		cpu = info['cpu']
-		memoria = info['memoria']
-		disco = info['disco']
-		return render(request,t,{'cpu': cpu,'memoria':memoria,'disco':disco})
+		try:
+			lista_diccionario = back_end.recuperar_token_url(usuario,back_end.regresar_contraseña(iv_pwd,id_usuario),id_usuario)
+		except excepciones.TokenException as err:
+			return render(request,t,{'errores': err})
+		lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+		return render(request,t,{'lista_datos': lista_datos_monitoreo})
 		#return render(request,t,{'errores':token})
 	else: #request.method == 'GET':
 		return redirect('/verificar_usuario')

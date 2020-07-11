@@ -7,6 +7,9 @@ import os
 import base64
 import requests
 import json
+from prograSegura import excepciones 
+
+
 def get_client_ip(request):
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
     if x_forwarded_for:
@@ -86,21 +89,10 @@ def generar_token():
     return token
 
 
-def regresar_token_sesion(url_servicios,usuario,contra):
-    url_token = url_servicios + '/autenticacion/'
-    data = {'username': usuario, 'password': contra}
-    respuesta = requests.post(url_token, data=data)
-    if respuesta.status_code != 200:
-        raise excepciones.TokenException('No se pudo recuperar el token: %s' % respuesta.status_code)
-    else:
-        diccionario = json.loads(respuesta.text)
-        return diccionario['token']
-
-
 def cifrar(mensaje,llave_aes, iv):
     aesCipher = Cipher(algorithms.AES(llave_aes), modes.CTR(iv),
                        backend=default_backend())
-    cifrador = aesCipher.encryptor() 
+    cifrador = aesCipher.encryptor()
     cifrado = cifrador.update(mensaje.encode('utf-8'))
     cifrador.finalize()
     return convertir_dato_base64(cifrado)
@@ -115,3 +107,47 @@ def descifrar(cifrado, iv):
     plano = descifrador.update(cifrado)
     descifrador.finalize()
     return plano
+
+def regresar_contraseña(iv,id_usuario):
+	query_contra = models.registrar_contraseña.objects.all().values_list('contraseña',flat=True).filter(usuario=id_usuario)
+	contra_cif = query_contra[0]
+	contra = descifrar(contra_cif,iv)
+	return contra
+
+def recuperar_token_url(usuario,contra,id_usuario):
+	lista_diccionario=[]
+	url_servicio = models.client_server.objects.all().values_list('url_servicios',flat=True).filter(usuario=id_usuario)
+	data={'username':usuario,'password':contra}
+	for url in url_servicio:
+		try:
+			respuesta = requests.post(url+'/autenticacion/',verify=False,data=data)
+		except:
+			telegram_bot_sendtext("El servidor %s se encuentra caido" % url)
+			lista_diccionario.append({'errores':"No se pudo recuperar el token para %s" % url})
+			continue
+		if respuesta.status_code != 200:
+			raise excepciones.TokenException('No se pudo recuperar el token: %s' % respuesta.status_code)
+		diccionario = json.loads(respuesta.text)
+		lista_diccionario.append({'url':url,'token':diccionario['token']})
+	return lista_diccionario
+
+
+def regresar_datos_monitoreo(lista_diccionario):
+	lista_datos_monitoreo=[]
+	for diccionario in lista_diccionario:
+		try:
+			headers = {'Authorization':'Token %s' %diccionario['token']}
+		except:
+			lista_datos_monitoreo.append({'errores':diccionario['errores'],'ttyd':"#"})
+			continue
+		respuesta = requests.get(diccionario['url']+'/monitor/',verify=False,headers=headers)
+		if respuesta.status_code != 200:
+			raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+		text_monitoreo = json.loads(respuesta.text)
+		lista_datos_monitoreo.append({'url':diccionario['url'],'cpu':text_monitoreo['cpu'],'memoria':text_monitoreo['memoria'],'disco':text_monitoreo['disco'],'ttyd':regresar_url_ttyd(diccionario['url'])})
+	return lista_datos_monitoreo
+
+
+def regresar_url_ttyd(url):
+	url = url.split(":")[:2]
+	return url[0]+":"+url[1]+":7681"
