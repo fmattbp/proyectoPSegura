@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block titulo %}Login{% endblock %}
 
-{% block contenido %}
+{% block estilos %}
+<link rel="stylesheet" href="{% static 'local/css/login.css' %}">
+{% endblock %}
 
+{% block fondo %}
+<body style="background-image: url({%static 'local/img/fondo.jpg'%});">
+{% endblock %}
+
+{% block contenido %}
 <br>
 <section>
-
 <div class="login-form">
   {% if errores %}
     <div class="alert alert-danger">
@@ -26,4 +32,5 @@
   </form>
 </div>
 </section>
+</div>
 {% endblock %}

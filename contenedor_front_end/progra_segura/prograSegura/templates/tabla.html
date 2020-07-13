@@ -1,0 +1,32 @@
+
+
+<table>
+        <thead class="thead-dark">
+        <tr>
+          <th>URL Servidor</th>
+          <th>CPU</th>
+          <th>Memoria</th>
+          <th>Disco</th>
+          <th>Consola</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+{% for servidor in lista_datos %}
+
+{% if servidor.errores %}
+<div class="alert alert-danger">
+  <strong>ERROR</strong> {{ servidor.errores }}
+</div>
+{% endif %}
+
+          <th> {{ servidor.url }} </td>
+          <td> {{ servidor.cpu }} </td>
+          <td> {{ servidor.memoria }} </td>
+          <td> {{ servidor.disco }} </td>
+          <td><a href= {{ servidor.ttyd }} target="_blank" class="btn btn-sm btn-block btn-dark">Terminal</a></td>
+        </tr>
+        </tbody>
+
+{% endfor %}
+</table>

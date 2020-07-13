@@ -4,20 +4,27 @@
 
 {% block encabezado %}Monitoreo de servidores{% endblock %}
 
+{% block nav%}
+  {%  include 'nav.html'%}
+{% endblock %}
+
 {% block contenido %}
 {% if errores %}
 <div class="alert alert-danger">
   <strong>ERROR</strong> {{ errores }}  
 </div>
 {% endif %}
-<table class="table table-striped table-dark">
-	<thead>
+
+
+
+<table class="table table-bordered">
+	<thead class="thead-dark">
 	<tr>
-	  <th scope="col">URL Servidor</th>
-	  <th scope="col">CPU</th>
-	  <th scope="col">MEMORIA</th>
-	  <th scope="col">DISCO</th>
-	  <th scope="col">Terminal</th>
+	  <th>URL Servidor</th>
+	  <th>CPU</th>
+	  <th>Memoria</th>
+	  <th>Disco</th>
+	  <th>Consola</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -30,17 +37,14 @@
 </div>
 {% endif %}
 
-	  <th scope="row"> {{ servidor.url }} </td>
+	  <th> {{ servidor.url }} </td>
 	  <td> {{ servidor.cpu }} </td>
 	  <td> {{ servidor.memoria }} </td>
 	  <td> {{ servidor.disco }} </td>
-	  <td><a href= {{ servidor.ttyd }} target="_blank" class="btn btn-sm btn-block btn-dark">Terminal</a> </td>
+	  <td><a href= {{ servidor.ttyd }} target="_blank" class="btn btn-sm btn-block btn-dark">Terminal</a></td>
 	</tr>
 	</tbody>
 
 {% endfor %}
 </table>
-
-
-
 {% endblock %}

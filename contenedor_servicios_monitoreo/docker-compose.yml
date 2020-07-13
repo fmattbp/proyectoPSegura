@@ -1,0 +1,63 @@
+version: '3.7'
+
+services:
+
+  front_end:
+    environment:
+      SECRET_KEY: ${SECRET_KEY}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      CLIENTE_SERVICIOS_USR: ${CLIENTE_SERVICIOS_USR}
+      CLIENTE_SERVICIOS_PWD: ${CLIENTE_SERVICIOS_PWD}
+    build: .
+    restart: always
+    container_name: servicios_back_end_1
+    volumes:
+      - ./servicios_back_end:/code
+    depends_on:
+      - bd
+    pid: host
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: "250M"
+
+  nginx:
+    image: nginx
+    restart: always
+    volumes:
+      - ./config/nginx/conf.d:/etc/nginx/conf.d
+      - ./servicios_back_end/static:/static
+      - /etc/letsencrypt/archive/tucanes.ddns.net:/certs:ro 
+     # - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - front_end
+    ports:
+      - 8080:8080
+
+  bd:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    volumes:
+      - /home/tucanesalv/data_servicios:/var/lib/mysql
+
+  ttyd:
+    image: shell
+    restart: always
+    build: ./ttyd
+    volumes:
+      - /etc/letsencrypt/archive/tucanes.ddns.net:/certs
+    environment:
+      USER: ${USER_TTYD}
+      PASS: ${PASS_TTYD}
+    container_name: shell_ttyd
+    ports:
+      - 7681:7681
+    network_mode: host

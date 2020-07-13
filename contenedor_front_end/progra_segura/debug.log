@@ -1,0 +1,1579 @@
+[WARNING] INVALID_CREDENTIALS: dfs 
+[INFO] ACCESS: prueba
+[WARNING] INVALID_TOKEN: fd
+2020-07-13 03:35:20,720
+2020-07-12 22:39:37,766
+2020-07-12 22:43:30,446 Internal Server Error: /verificar_usuario/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 75, in verificar_usuario
+    logger.warning("[WARNING] EXPIRED_TOKEN: %s" % codigo_usr)
+UnboundLocalError: local variable 'codigo_usr' referenced before assignment
+2020-07-12 22:43:46,374 Internal Server Error: /verificar_usuario/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 75, in verificar_usuario
+    logger.warning("[WARNING] EXPIRED_TOKEN: %s" % codigo_usr)
+UnboundLocalError: local variable 'codigo_usr' referenced before assignment
+2020-07-12 22:43:49,944 Not Found: /lgout
+2020-07-12 22:46:37,879 [INFO] ACCESS: prueba
+2020-07-12 22:46:45,037 [WARNING] INVALID_TOKEN
+2020-07-12 22:49:55,248 Not Found: /SaliEnElLog
+2020-07-12 23:16:11,340 [INFO] ACCESS: prueba
+2020-07-12 23:16:21,414 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 88, in monitor
+    return render(request,t,{'lista_datos': lista_datos_monitoreo})
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'monitor' not found. 'monitor' is not a valid view function or pattern name.
+2020-07-12 23:17:21,102 [INFO] ACCESS: prueba
+2020-07-12 23:17:45,121 Not Found: /favicon.ico
+2020-07-12 23:17:51,277 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 88, in monitor
+    return render(request,t,{'lista_datos': lista_datos_monitoreo})
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'monitor' not found. 'monitor' is not a valid view function or pattern name.
+2020-07-12 23:19:42,103 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 88, in monitor
+    return render(request,t,{'lista_datos': lista_datos_monitoreo})
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'monitor' not found. 'monitor' is not a valid view function or pattern name.
+2020-07-12 23:20:01,885 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 88, in monitor
+    return render(request,t,{'lista_datos': lista_datos_monitoreo})
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'monitor' not found. 'monitor' is not a valid view function or pattern name.
+2020-07-12 23:21:15,403 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 88, in monitor
+    return render(request,t,{'lista_datos': lista_datos_monitoreo})
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'monitor' not found. 'monitor' is not a valid view function or pattern name.
+2020-07-12 23:21:20,543 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 88, in monitor
+    return render(request,t,{'lista_datos': lista_datos_monitoreo})
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'monitor' not found. 'monitor' is not a valid view function or pattern name.
+2020-07-12 23:22:31,262 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 88, in monitor
+    return render(request,t,{'lista_datos': lista_datos_monitoreo})
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'monitor' not found. 'monitor' is not a valid view function or pattern name.
+2020-07-12 23:22:39,666 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 88, in monitor
+    return render(request,t,{'lista_datos': lista_datos_monitoreo})
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'monitor' not found. 'monitor' is not a valid view function or pattern name.
+2020-07-12 23:22:55,580 [INFO] ACCESS: prueba
+2020-07-12 23:23:21,895 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 88, in monitor
+    return render(request,t,{'lista_datos': lista_datos_monitoreo})
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'monitor' not found. 'monitor' is not a valid view function or pattern name.
+2020-07-12 23:25:23,853 [INFO] ACCESS: prueba
+2020-07-12 23:25:36,653 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 88, in monitor
+    return render(request,t,{'lista_datos': lista_datos_monitoreo})
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '/monitor' not found. '/monitor' is not a valid view function or pattern name.
+2020-07-12 23:34:05,527 [INFO] ACCESS: prueba
+2020-07-12 23:34:13,347 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 88, in monitor
+    return render(request,t,{'lista_datos': lista_datos_monitoreo})
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '/monitor' not found. '/monitor' is not a valid view function or pattern name.
+2020-07-12 23:35:52,949 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 88, in monitor
+    return render(request,t,{'lista_datos': lista_datos_monitoreo})
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '/monitor' not found. '/monitor' is not a valid view function or pattern name.
+2020-07-12 23:36:29,947 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 88, in monitor
+    return render(request,t,{'lista_datos': lista_datos_monitoreo})
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '/monitor' not found. '/monitor' is not a valid view function or pattern name.
+2020-07-12 23:37:03,165 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 88, in monitor
+    return render(request,t,{'lista_datos': lista_datos_monitoreo})
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '/monitor' not found. '/monitor' is not a valid view function or pattern name.
+2020-07-12 23:37:11,244 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 88, in monitor
+    return render(request,t,{'lista_datos': lista_datos_monitoreo})
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '/monitor' not found. '/monitor' is not a valid view function or pattern name.
+2020-07-12 23:40:19,247 [INFO] ACCESS: prueba
+2020-07-12 23:40:25,651 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 88, in monitor
+    return render(request,t,{'lista_datos': lista_datos_monitoreo})
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '/monitor' not found. '/monitor' is not a valid view function or pattern name.
+2020-07-12 23:52:20,211 [INFO] ACCESS: prueba
+2020-07-12 23:52:50,068 Forbidden (CSRF cookie not set.): /login/
+2020-07-12 23:52:52,435 Forbidden (CSRF cookie not set.): /login/
+2020-07-12 23:53:01,141 [INFO] ACCESS: prueba
+2020-07-12 23:53:22,852 [INFO] ACCESS: prueba
+2020-07-13 00:24:28,646 [WARNING] INVALID_CREDENTIALS: prueba 
+2020-07-13 00:24:35,310 [INFO] ACCESS: prueba
+2020-07-13 00:25:10,218 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:10,648 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:11,062 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:11,474 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:11,919 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:12,337 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:12,818 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:13,275 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:13,712 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:14,205 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:14,671 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:15,190 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:15,632 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:16,090 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:16,521 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:16,959 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:17,379 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:17,815 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:18,227 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:18,629 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:19,045 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:19,485 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:19,889 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:20,361 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:20,820 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:21,308 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:21,751 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:22,188 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:22,609 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:23,053 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:23,494 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:23,906 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:24,384 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:24,812 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:25,233 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:25,683 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:25:26,135 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in monitor
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:28:51,524 [WARNING] INVALID_CREDENTIALS: prueba 
+2020-07-13 00:29:02,828 [INFO] ACCESS: prueba
+2020-07-13 00:37:23,255 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 469, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 94, in monitor
+    return render(request,t)
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.8/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.8/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 471, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 530, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 8: 'endblock'. Did you forget to register or load this tag?
+2020-07-13 00:38:40,466 [INFO] ACCESS: prueba
+2020-07-13 00:40:33,291 [INFO] ACCESS: prueba
+2020-07-13 00:40:35,497 [INFO] ACCESS: prueba
+2020-07-13 00:45:30,000 [INFO] ACCESS: prueba
+2020-07-13 00:46:27,771 Not Found: /favicon.ico
+2020-07-13 00:46:40,073 [INFO] ACCESS: prueba
+2020-07-13 00:47:50,034 Internal Server Error: /tabla/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in tabla
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:48:56,585 Internal Server Error: /tabla/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in tabla
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:50:54,343 Internal Server Error: /tabla/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in tabla
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:53:22,290 Internal Server Error: /tabla/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in tabla
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 00:55:35,901 [INFO] ACCESS: prueba
+2020-07-13 00:56:44,265 Not Found: /favicon.ico
+2020-07-13 00:56:50,867 [INFO] ACCESS: prueba
+2020-07-13 00:58:15,058 [INFO] ACCESS: prueba
+2020-07-13 00:58:27,866 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 94, in monitor
+    return render(request,t)
+  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.8/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.8/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.8/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 478, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 495, in extend_nodelist
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: <ExtendsNode: extends 'base.html'> must be the first tag in the template.
+2020-07-13 00:59:41,754 [WARNING] INVALID_CREDENTIALS: prueba 
+2020-07-13 00:59:48,637 [INFO] ACCESS: prueba
+2020-07-13 01:14:31,009 [INFO] ACCESS: prueba
+2020-07-13 01:18:08,544 [INFO] ACCESS: prueba
+2020-07-13 01:20:36,971 Internal Server Error: /tabla/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in tabla
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 01:20:42,932 Internal Server Error: /tabla/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in tabla
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 01:20:48,954 Internal Server Error: /tabla/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/prograSegura/decoradores.py", line 7, in interna
+    return view(request, *args, **kwargs)
+  File "/code/prograSegura/views.py", line 87, in tabla
+    lista_datos_monitoreo = back_end.regresar_datos_monitoreo(lista_diccionario)
+  File "/code/prograSegura/back_end.py", line 152, in regresar_datos_monitoreo
+    raise excepciones.MonitorException('Hubo un error al querer recuperar los datos de monitoreo: %s' % respuesta.status_code)
+AttributeError: module 'prograSegura.excepciones' has no attribute 'MonitorException'
+2020-07-13 01:20:59,894 [INFO] ACCESS: prueba
+2020-07-13 01:24:28,644 [INFO] ACCESS: prueba
+2020-07-13 01:26:09,156 Not Found: /favicon.ico
+2020-07-13 01:27:24,288 [INFO] ACCESS: prueba
+2020-07-13 01:27:32,962 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    raise ValueError(
+ValueError: The view prograSegura.decoradores.interna didn't return an HttpResponse object. It returned None instead.
+2020-07-13 01:28:02,380 Internal Server Error: /monitor/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    raise ValueError(
+ValueError: The view prograSegura.decoradores.interna didn't return an HttpResponse object. It returned None instead.
+2020-07-13 01:29:34,888 [WARNING] INVALID_TOKEN

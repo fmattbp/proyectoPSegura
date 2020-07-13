@@ -25,7 +25,7 @@ INTENTOS_LOGIN = 5
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -115,7 +115,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+#TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Mexico_City'
 
 USE_I18N = True
 
@@ -129,3 +130,33 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = '/static'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+
+
+
+    'formatters': { 'file': {
+            # exact format is not important, this is the minimum 
+            # information
+            'format': '%(asctime)s %(message)s',
+        },
+    },
+
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'formatter': 'file',
+            'filename': 'debug.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
+}

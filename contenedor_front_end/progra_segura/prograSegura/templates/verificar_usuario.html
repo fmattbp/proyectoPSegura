@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block titulo %}Login{% endblock %}
+
+{% block estilos %}
+<link rel="stylesheet" href="{% static 'local/css/login.css' %}">
+{% endblock %}
+
+{% block fondo %}
+<body style="background-image: url({%static 'local/img/fondo.jpg'%});">
+{%  endblock %}
+
 
 {% block contenido %}
 <br>
@@ -24,9 +34,6 @@
   </form>
    </div>
 </section>
-<div class="footer">
-  <p>Facultad de Estadística e Informática | Universidad Veracruzana</p>
-</div>
 {% endblock %}
 
 

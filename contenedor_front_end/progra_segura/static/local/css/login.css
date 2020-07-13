@@ -1,0 +1,38 @@
+
+.login-form{
+  width: 340px;
+  margin: 50px auto;
+}
+
+.login-form form {
+  border-radius:10px;
+  margin-bottom: 15px;
+  background: #f7f7f7;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+}
+
+.login-form h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0 0 15px;
+}
+
+.form-control, .btn {
+  min-height: 38px;
+  border-radius: 2px;
+}
+
+.btn {
+  border-radius:4px;        
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #08298A;
+}    
+input{
+  width: 100%;
+  padding: 3px;
+  border: none;
+  border-bottom: 1px solid grey;
+  background: #f7f7f7;
+}

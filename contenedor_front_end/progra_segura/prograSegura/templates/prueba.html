@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %}MonitorTM{% endblock %}
+
+{% block encabezado %}Monitoreo de servidores{% endblock %}
+{% block nav %}
+  {% include 'nav.html' %}
+{% endblock %}
+
+{% block scripts%}
+<script src="{%static 'local/js/refresh.js' %}"></script>
+{% endblock %}
+
+{% block contenido %}
+{% if errores %}
+<div class="alert alert-danger">
+  <strong>ERROR</strong> {{ errores }}  
+</div>
+{% endif %}
+<table class="table table-bordered" id="actualizar">
+</table>
+
+
+
+{% endblock %}
+

@@ -1,49 +1,33 @@
-     body {
-	      background-color:#024626;	
-     }
+html {
+  position: relative;
+  min-height: 100%;
+}
 
-    .login-form {
-	    width: 340px;
-    	margin: 50px auto;
-     }
-    .login-form form {
-	    border-radius:10px;
-    	margin-bottom: 15px;
-      background: #f7f7f7;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 4);
-      padding: 30px;
-    }
-    .login-form h2 {
-      font-size: 25px;
-      font-weight: bold;
-      margin: 0 0 15px;
-    }
-    .form-control, .btn {
-      min-height: 38px;
-      border-radius: 2px;
-    }
-    .btn {
-      border-radius:4px;        
-      font-size: 15px;
-      font-weight: bold;
-    }
-    input{
-      width: 100%;
-      padding: 3px;
-      border: none;
-      border-bottom: 1px solid grey;
-      background: #f7f7f7; ;
-    }
-    
-    .pie {
-       border-radius:3px;
-       position: fixed;
-       left: 0;
-       bottom: 0;
-       width: 100%;
-       height: 6%;
-       background-color: #011F11;
-       font-size:20px;
-       color: white;
-       padding:15px;
-    }
+body{
+  margin-bottom: 60px;
+  background-attachment:fixed;
+  background-size: 100% 100%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 61px;
+  line-height: 60px;
+  background-color: #D8D8D8;
+}
+
+#container_footer {
+  width: auto;
+  max-width: 680px;
+  padding:  15px;
+}
+
+h5{
+  color: black;
+}
+
+#nav1{
+  color: white;
+}

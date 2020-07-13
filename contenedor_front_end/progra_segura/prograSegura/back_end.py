@@ -7,7 +7,7 @@ import os
 import base64
 import requests
 import json
-from prograSegura import excepciones 
+from prograSegura import excepciones
 
 
 def get_client_ip(request):
@@ -89,13 +89,16 @@ def generar_token():
     return token
 
 
-def cifrar(mensaje,llave_aes, iv):
+def cifrar(mensaje,iv):
+    iv = convertir_base64_dato(iv)
+    llave_aes= convertir_base64_dato(settings.LLAVE_AES.encode('utf-8'))
     aesCipher = Cipher(algorithms.AES(llave_aes), modes.CTR(iv),
                        backend=default_backend())
     cifrador = aesCipher.encryptor()
     cifrado = cifrador.update(mensaje.encode('utf-8'))
     cifrador.finalize()
     return convertir_dato_base64(cifrado)
+
 
 def descifrar(cifrado, iv):
     llave_aes = convertir_base64_dato(settings.LLAVE_AES.encode('utf-8'))
@@ -114,11 +117,15 @@ def regresar_contraseña(iv,id_usuario):
 	contra = descifrar(contra_cif,iv)
 	return contra
 
-def recuperar_token_url(usuario,contra,id_usuario):
+def recuperar_token_url(id_usuario):
 	lista_diccionario=[]
 	url_servicio = models.client_server.objects.all().values_list('url_servicios',flat=True).filter(usuario=id_usuario)
-	data={'username':usuario,'password':contra}
 	for url in url_servicio:
+		contra_cif =  models.servers.objects.all().values_list('contraseña',flat=True).filter(url_servicios=url)
+		usuario_servicios =  models.servers.objects.all().values_list('usuario',flat=True).filter(url_servicios=url)
+		iv = models.servers.objects.all().values_list('iv',flat=True).filter(url_servicios=url)
+		contra_servicios = descifrar(contra_cif[0],iv[0])
+		data = {'username':usuario_servicios[0],'password':contra_servicios}
 		try:
 			respuesta = requests.post(url+'/autenticacion/',verify=False,data=data)
 		except:
@@ -150,4 +157,4 @@ def regresar_datos_monitoreo(lista_diccionario):
 
 def regresar_url_ttyd(url):
 	url = url.split(":")[:2]
-	return url[0]+":"+url[1]+":7681"
+	return "https:"+url[1]+":7681"

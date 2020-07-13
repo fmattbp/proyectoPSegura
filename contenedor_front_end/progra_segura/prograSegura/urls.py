@@ -24,5 +24,6 @@ urlpatterns = [
     path('verificar_usuario/', verificar_usuario, name='verificar_usuario'),
     path('generar_nuevo_token/', generar_nuevo_token),
     path('monitor/', monitor),
+    path('tabla/', tabla),
     path('logout/', logout),
 ]
